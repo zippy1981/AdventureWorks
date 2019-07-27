@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AdventureWorks", "AdventureWorks.sqlproj", "{EF097C7C-FACB-4F71-BF66-DC6508F6B3FD}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AdventureWorksTesting", "AdventureWorksTesting\AdventureWorksTesting.sqlproj", "{75AEAF39-F6D2-4707-B113-EF55DC1ACA68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,12 @@ Global
 		{EF097C7C-FACB-4F71-BF66-DC6508F6B3FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF097C7C-FACB-4F71-BF66-DC6508F6B3FD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EF097C7C-FACB-4F71-BF66-DC6508F6B3FD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{75AEAF39-F6D2-4707-B113-EF55DC1ACA68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75AEAF39-F6D2-4707-B113-EF55DC1ACA68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75AEAF39-F6D2-4707-B113-EF55DC1ACA68}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{75AEAF39-F6D2-4707-B113-EF55DC1ACA68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75AEAF39-F6D2-4707-B113-EF55DC1ACA68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75AEAF39-F6D2-4707-B113-EF55DC1ACA68}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
