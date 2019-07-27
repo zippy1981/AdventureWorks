@@ -243,4 +243,7 @@
       <DatabaseVariableLiteralValue>sys</DatabaseVariableLiteralValue>
     </ArtifactReference>
   </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="Script.PreDeployment.Setup_tSQLt.sql" />
+  </ItemGroup>
 </Project>
