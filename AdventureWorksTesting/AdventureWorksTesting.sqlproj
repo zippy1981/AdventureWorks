@@ -226,6 +226,7 @@
   <ItemGroup>
     <Reference Include="tSQLtCLR">
       <HintPath>..\Assemblies\tSQLtCLR.dll</HintPath>
+      <IsModelAware>True</IsModelAware>
     </Reference>
   </ItemGroup>
   <ItemGroup>
