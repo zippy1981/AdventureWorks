@@ -193,7 +193,6 @@
     <Build Include="dbo\Functions\ufnGetAccountingStartDate.sql" />
     <Build Include="dbo\Functions\ufnGetAccountingEndDate.sql" />
     <Build Include="dbo\Functions\ufnGetContactInformation.sql" />
-    <Build Include="dbo\Stored Procedures\uspSearchCandidateResumes.sql" />
     <Build Include="dbo\Stored Procedures\uspPrintError.sql" />
     <Build Include="dbo\Stored Procedures\uspLogError.sql" />
     <Build Include="dbo\Stored Procedures\uspGetWhereUsedProductID.sql" />
@@ -229,5 +228,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assemblies\tSQLtCLR.dll" />
+    <None Include="AdventureWorks.publish.xml" />
   </ItemGroup>
 </Project>
