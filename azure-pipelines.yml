@@ -43,15 +43,14 @@ steps:
   inputs:
     targetType: inline
     script: dir -s
+- task: CopyFiles@2
+  inputs:
+    contents: '$(Build.SourceDirectory)/**/*.dacpac'
+    targetFolder: $(Build.ArtifactStagingDirectory)
 - task: PublishBuildArtifacts@1
   displayName: PublishDatabase
   inputs:
-    PathtoPublish: '$(Build.SourcesDirectory)/bin/Release/'
+    PathtoPublish: 'System.ArtifactsDirectory/*.dacpac'
     ArtifactName: 'AdventureWorks'
-    publishLocation: 'Container'
-- task: PublishBuildArtifacts@1
-  displayName: PublishDatabaseTests
-  inputs:
-    PathtoPublish: '$(Build.SourcesDirectory)/AdventureWorksTesting/bin/Release/'
-    ArtifactName: 'AdventureWorksTesting'
-    publishLocation: 'Container'
+    publishLocation: 'DACPAC'
+
