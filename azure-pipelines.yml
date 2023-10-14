@@ -4,13 +4,20 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 trigger:
-- master
+  branches:
+    include:
+    - master
+
+pr:
+  branches:
+    include:
+    - master
 
 pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: '**/*.sln'
+  solution: 'AdventureWorks.sqlproj'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
@@ -36,15 +43,14 @@ steps:
   inputs:
     targetType: inline
     script: dir -s
+- task: CopyFiles@2
+  inputs:
+    contents: '**/*.dacpac'
+    targetFolder: $(Build.ArtifactStagingDirectory)
 - task: PublishBuildArtifacts@1
   displayName: PublishDatabase
   inputs:
-    PathtoPublish: '$(Build.SourcesDirectory)/bin/Release/'
+    PathtoPublish: '$(System.ArtifactsDirectory)/*.dacpac'
     ArtifactName: 'AdventureWorks'
-    publishLocation: 'Container'
-- task: PublishBuildArtifacts@1
-  displayName: PublishDatabaseTests
-  inputs:
-    PathtoPublish: '$(Build.SourcesDirectory)/AdventureWorksTesting/bin/Release/'
-    ArtifactName: 'AdventureWorksTesting'
-    publishLocation: 'Container'
+    publishLocation: 'DACPAC'
+
