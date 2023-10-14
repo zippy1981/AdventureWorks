@@ -45,7 +45,7 @@ steps:
     script: dir -s
 - task: CopyFiles@2
   inputs:
-    contents: '$(Build.SourceDirectory)/**/*.dacpac'
+    contents: '**/*.dacpac'
     targetFolder: $(Build.ArtifactStagingDirectory)
 - task: PublishBuildArtifacts@1
   displayName: PublishDatabase
