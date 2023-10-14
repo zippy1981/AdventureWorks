@@ -4,10 +4,17 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 trigger:
-- master
+  branches:
+    include:
+    - master
+
+pr:
+  branches:
+    include:
+    - master
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'windows-l2019'
 
 variables:
   solution: '**/*.sln'
