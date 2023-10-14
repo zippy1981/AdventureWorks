@@ -17,7 +17,7 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: '**/*.sln'
+  solution: 'AdventureWorks.sqlproj'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
