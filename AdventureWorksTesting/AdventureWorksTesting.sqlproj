@@ -230,7 +230,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\AdventureWorks\AdventureWorks.sqlproj">
+    <ProjectReference Include="..\AdventureWorks.sqlproj">
       <Name>AdventureWorks</Name>
       <Project>{ef097c7c-facb-4f71-bf66-dc6508f6b3fd}</Project>
       <Private>True</Private>
