@@ -50,7 +50,7 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: PublishDatabase
   inputs:
-    PathtoPublish: 'System.ArtifactsDirectory/*.dacpac'
+    PathtoPublish: '$(System.ArtifactsDirectory)/*.dacpac'
     ArtifactName: 'AdventureWorks'
     publishLocation: 'DACPAC'
 
